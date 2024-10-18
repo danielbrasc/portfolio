@@ -1,0 +1,33 @@
+#project-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project {
+  width: calc(50% - 16px);
+}
+
+.project .title {
+  color: var(--gray-50);
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 2px solid var(--gray-400);
+  margin-bottom: 50px;
+}
+
+.project .description {
+  color: var(--gray-400);
+  margin: 12px 0;
+}
+
+@media screen and (max-width: 860px) {
+  #project-list {
+    flex-direction: column;
+  }
+
+  .project {
+    width: 100%;
+  }
+}

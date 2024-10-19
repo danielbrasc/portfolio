@@ -20,15 +20,15 @@
 *:before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
 }
 
 body {
-  background-color: var(--gray-950);
   color: var(--gray-400);
+  background-color: var(--gray-950);
   min-width: 320px;
   font-size: 0.9rem;
 }
@@ -73,5 +73,14 @@ section {
   main,
   footer {
     padding: 0 24%;
+  }
+}
+
+@media screen and (min-width: 1480px) {
+
+  header,
+  main,
+  footer {
+    padding: 0 34%;
   }
 }

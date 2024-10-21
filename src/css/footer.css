@@ -1,0 +1,20 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 28px;
+}
+
+footer .name {
+  font-size: 16px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-links a {
+  color: var(--gray-500)
+}

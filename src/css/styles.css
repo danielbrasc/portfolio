@@ -8,6 +8,14 @@
   --gray-400: #0c0a09;
 }
 
+.light {
+  --gray-50: #0c0a09;
+  --gray-100: #44403c;
+  --gray-200: #78716c;
+  --gray-300: #a8a29e;
+  --gray-400: #fafaf9;
+}
+
 /* Resets */
 * {
   margin: 0;

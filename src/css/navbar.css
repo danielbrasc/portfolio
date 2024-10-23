@@ -13,8 +13,10 @@
   cursor: pointer;
 }
 
-#mobile-menu {
-  display: none;
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 #nav-list {
@@ -25,12 +27,31 @@
 .nav-item a {
   border-bottom: 2px solid transparent;
   transition: all .3s ease-in;
-  color: var(--gray-100);
+  color: var(--gray-200);
 }
 
 .nav-item a:hover {
-  color: var(--gray-300);
+  color: var(--gray-100);
   border-color: var(--gray-300);
+}
+
+button.toggle-theme {
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  border-radius: 100%;
+  background: none;
+  cursor: pointer;
+  color: var(--gray-200);
+  transition: color 0.4s ease-in;
+}
+
+button.toggle-theme:hover {
+  color: var(--gray-100);
+}
+
+#mobile-menu {
+  display: none;
 }
 
 @media screen and (max-width: 860px) {

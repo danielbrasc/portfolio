@@ -4,7 +4,7 @@ footer {
   padding-block: 28px;
 }
 
-footer .name {
+footer .author {
   font-size: 16px;
 }
 
@@ -16,5 +16,10 @@ footer .name {
 }
 
 .social-links a {
-  color: var(--gray-200)
+  color: var(--gray-200);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--gray-100);
 }

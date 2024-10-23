@@ -7,7 +7,7 @@
 }
 
 .logo {
-  color: var(--gray-400);
+  color: var(--gray-100);
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
@@ -25,12 +25,12 @@
 .nav-item a {
   border-bottom: 2px solid transparent;
   transition: all .3s ease-in;
-  color: var(--gray-400);
+  color: var(--gray-100);
 }
 
 .nav-item a:hover {
   color: var(--gray-300);
-  border-color: var(--gray-700);
+  border-color: var(--gray-300);
 }
 
 @media screen and (max-width: 860px) {

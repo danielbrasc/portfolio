@@ -14,7 +14,7 @@
   color: var(--gray-50);
   cursor: pointer;
   font-weight: 500;
-  border-bottom: 2px solid var(--gray-400);
+  border-bottom: 2px solid var(--gray-100);
   margin-bottom: 50px;
   transition: opacity 0.3s ease-in;
 }
@@ -31,7 +31,7 @@
 }
 
 .project .description {
-  color: var(--gray-400);
+  color: var(--gray-100);
   margin: 12px 0;
   max-width: 485px;
 }

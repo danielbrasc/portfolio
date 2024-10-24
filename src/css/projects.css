@@ -36,6 +36,8 @@
   max-width: 485px;
 }
 
+
+
 @media screen and (max-width: 900px) {
   #project-list {
     flex-direction: column;

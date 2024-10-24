@@ -9,13 +9,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
+<!-- TODO - deixar o menu mobile funcional -->
 
 <body>
   <header>
     <nav id="navbar">
-      <span class="logo">danielbrasc.</span>
+      <a href="/" class="logo">danielbrasc.</a>
       <div class="menu">
+        <button class="btn-menu">
+          <i class="fa-solid fa-bars fa-xl"></i>
+        </button>
         <ul id="nav-list">
+          <li class="nav-item">
+            <button class="close-menu">
+              <i class="fa-solid fa-xmark fa-xl"></i>
+            </button>
+          </li>
           <li class="nav-item">
             <a href="#about">sobre mim</a>
           </li>
@@ -25,14 +34,14 @@
           <li class="nav-item">
             <a href="#highlights">destaques</a>
           </li>
+          <li class="nav-item">
+            <button class="toggle-theme">
+              <i class="fa-solid fa-sun fa-xl"></i>
+            </button>
+          </li>
         </ul>
-        <button class="toggle-theme">
-          <i class="fa-regular fa-sun fa-xl"></i>
-        </button>
       </div>
-      <ul id="mobile-menu">
-        <li><i class="fa-solid fa-bars fa-xl"></i></li>
-      </ul>
+
     </nav>
   </header>
   <main>

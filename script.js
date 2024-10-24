@@ -1,7 +1,28 @@
+// Mobile Menu
+(() => {
+  const menu = document.querySelector('.menu');
+  const btnOpenMenu = document.querySelector('.btn-menu');
+  const btnCloseMenu = document.querySelector('.close-menu')
+
+  btnOpenMenu.addEventListener('click', () => {
+    menu.classList.add('active');
+    btnOpenMenu.classList.add('active');
+    btnCloseMenu.classList.add('active');
+    btnCloseMenu.classList.remove('hidden');
+  });
+
+  btnCloseMenu.addEventListener('click', () => {
+    menu.classList.remove('active');
+    btnCloseMenu.classList.remove('active');
+  });
+
+})();
+
+// Theme Switcher
 (() => {
   const body = document.querySelector('body');
-  const btnToggleTheme = document.querySelector(".toggle-theme");
-  const btnIcon = document.querySelector(".toggle-theme > i");
+  const btnToggleTheme = document.querySelector('.toggle-theme');
+  const btnIcon = document.querySelector('.toggle-theme > i');
 
   btnToggleTheme.onclick = toggleTheme;
 
@@ -9,7 +30,7 @@
     const currentTheme = body.classList.value;
     const savedTheme = getTheme();
 
-    if(currentTheme && currentTheme === savedTheme) {
+    if (currentTheme && currentTheme === savedTheme) {
       applyDarkTheme();
     } else {
       applyLightTheme();
@@ -25,7 +46,7 @@
   }
 
   function changeThemeIcon(theme) {
-    if(theme === 'light') {
+    if (theme === 'light') {
       btnIcon.classList.remove('fa-sun');
       btnIcon.classList.add('fa-moon');
     } else {
@@ -47,7 +68,7 @@
   }
 
   function init() {
-    if(!getTheme()) {
+    if (!getTheme()) {
       saveTheme();
     }
 

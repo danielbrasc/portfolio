@@ -37,11 +37,24 @@ header {
   border-bottom: 2px solid transparent;
   transition: all .3s ease-in;
   color: var(--gray-200);
+  text-wrap: nowrap;
 }
 
 .nav-item a:hover {
   color: var(--gray-100);
   border-color: var(--gray-300);
+}
+
+.btn-menu {
+  display: none;
+  background: none;
+  color: var(--gray-200);
+  cursor: pointer;
+  transition: 0.4s ease-in;
+}
+
+.btn-menu:hover {
+  color: var(--gray-50);
 }
 
 .toggle-theme {
@@ -61,16 +74,8 @@ header {
   color: var(--gray-100);
 }
 
-.btn-menu {
+.toggle-theme>.selected-theme {
   display: none;
-  background: none;
-  color: var(--gray-200);
-  cursor: pointer;
-  transition: 0.4s ease-in;
-}
-
-.btn-menu:hover {
-  color: var(--gray-50);
 }
 
 .close-menu {
@@ -92,10 +97,9 @@ header {
 
   .menu #nav-list,
   .menu.active #nav-list {
-    height: 50%;
+    height: clamp(360px, 50%, 50vh);
     width: 100vw;
-    border-radius: 0;
-    border-end-start-radius: 40px;
+    border-radius: 0 0 0 40px;
   }
 
   .menu.active #nav-list .nav-item {
@@ -103,10 +107,9 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) and (min-width: 451px) {
+@media screen and (max-width: 768px) and (min-width: 450px) {
   .menu.active #nav-list {
     width: 40%;
-    height: 300px;
   }
 
   .menu.active #nav-list .nav-item {
@@ -141,7 +144,7 @@ header {
     top: 0;
     right: 0;
     width: 30%;
-    min-height: 40vh;
+    height: clamp(400px, 25vh, 50vh);
     background: var(--primary);
     border-radius: 12px 0 0 12px;
     pointer-events: none;
@@ -173,6 +176,20 @@ header {
     color: var(--gray-200);
   }
 
+  .menu.active #nav-list {
+    transform: translateX(0);
+    pointer-events: all;
+  }
+
+  .menu.active #nav-list .nav-item>.close-menu {
+    position: relative;
+    top: -5px;
+  }
+
+  .menu.active #nav-list .nav-item {
+    transform: translateX(0);
+  }
+
   .menu.active #nav-list .nav-item:nth-child(1) {
     transition: 0.5s 0.1s;
   }
@@ -193,22 +210,7 @@ header {
     transition: 0.5s 0.8s;
   }
 
-  .menu.active #nav-list {
-    min-height: 300px;
-    transform: translateX(0);
-    pointer-events: all;
-  }
-
-  .menu.active #nav-list .nav-item {
-    transform: translateX(0);
-  }
-
   .menu.active #nav-list .nav-item a {
     opacity: 1;
-  }
-
-  .menu.active #nav-list .nav-item>.close-menu {
-    position: relative;
-    top: -5px;
   }
 }
